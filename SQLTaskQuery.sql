@@ -29,19 +29,19 @@ GO
 
 INSERT INTO Products(ProductName)
 VALUES
-	(N'Молоко'),
-	(N'Мажитэль'),
-	(N'Молочный коктейль Чудо'),
-	(N'Сыр'),
+	(N'РњРѕР»РѕРєРѕ'),
+	(N'РњР°Р¶РёС‚СЌР»СЊ'),
+	(N'РњРѕР»РѕС‡РЅС‹Р№ РєРѕРєС‚РµР№Р»СЊ Р§СѓРґРѕ'),
+	(N'РЎС‹СЂ'),
 	('Evervess'),
 	('Fanta'),
-	(N'Банан'),
-	(N'Пирог');
+	(N'Р‘Р°РЅР°РЅ'),
+	(N'РџРёСЂРѕРі');
 
 INSERT INTO Categories (CategoryName)
 VALUES 
-	(N'Напитки'),
-	(N'Молочные продукты');
+	(N'РќР°РїРёС‚РєРё'),
+	(N'РњРѕР»РѕС‡РЅС‹Рµ РїСЂРѕРґСѓРєС‚С‹');
 	
 INSERT INTO ProductsCategories(
 	ProductId,
@@ -58,7 +58,7 @@ VALUES
 	(6, 1);
 GO
 
-SELECT p.ProductName + ' - ' + ISNULL(c.CategoryName, 'Категория отсутствует') AS Result
+SELECT p.ProductName + ' - ' + ISNULL(c.CategoryName, 'РљР°С‚РµРіРѕСЂРёСЏ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚') AS Result
 FROM Products AS p
 LEFT JOIN ProductsCategories AS pc ON p.Id = pc.ProductId
 LEFT JOIN Categories AS c ON pc.CategoryId = c.Id
